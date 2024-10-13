@@ -14,12 +14,10 @@ def koch_snowflake(t, length, depth):
         koch_snowflake(t, length, depth - 1)
 
 t = turtle.Turtle()
-t.speed(0)
-t.color("blue")  # You can change this color
-t.pensize(2)  # You can change line thickness
+t.speed(1)  # Change the speed: 0 is fastest, 1-10 are slower
 t.penup()
-t.goto(-150, 150)
+t.goto(-150, 150)  # You can adjust the starting position of the drawing by changing these coordinates
 t.pendown()
 
-koch_snowflake(t, 300, 3)
+koch_snowflake(t, 300, 3)  # Try changing the value of 'depth' to see how it affects the complexity of the pattern
 turtle.done()
